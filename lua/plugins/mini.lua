@@ -1,10 +1,17 @@
 return {
 	{
 		"echasnovski/mini.nvim",
+		config = function() end,
+	},
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
-			local statusline = require("mini.statusline")
-			statusline.setup({
-				use_icons = true,
+			require("lualine").setup({
+				options = {
+					icons_enabled = true,
+					theme = "auto",
+				},
 			})
 		end,
 	},
