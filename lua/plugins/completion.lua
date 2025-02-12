@@ -1,8 +1,18 @@
 return {
 	{
+		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
+		config = function()
+			require("luasnip.loaders.from_vscode").lazy_load()
+		end,
+	},
+	{
 		"saghen/blink.cmp",
 		-- optional: provides snippets for the snippet source
-		dependencies = "rafamadriz/friendly-snippets",
+		dependencies = {
+			"rafamadriz/friendly-snippets",
+			"L3MON4D3/LuaSnip",
+		},
 
 		-- use a release tag to download pre-built binaries
 		version = "*",
@@ -35,6 +45,7 @@ return {
 			sources = {
 				default = { "lsp", "path", "snippets", "buffer" },
 			},
+			snippets = { preset = "luasnip" },
 		},
 		opts_extend = { "sources.default" },
 	},
