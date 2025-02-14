@@ -2,8 +2,9 @@ return {
 	"stevearc/conform.nvim",
 	opts = {
 		formatters_by_ft = {
+			json = { "prettierd" },
 			lua = { "stylua" },
-			python = { "ruff_format" },
+			python = { "ruff", "ruff_format" },
 			javascript = { "prettierd" },
 			typescript = { "prettierd" },
 			typescriptreact = { "prettierd" },
