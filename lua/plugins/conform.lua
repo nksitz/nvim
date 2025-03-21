@@ -3,6 +3,7 @@ return {
 	opts = {
 		formatters_by_ft = {
 			json = { "prettierd" },
+			yaml = { "prettierd" },
 			lua = { "stylua" },
 			python = { "ruff", "ruff_format" },
 			javascript = { "prettierd" },
