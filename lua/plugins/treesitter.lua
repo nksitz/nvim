@@ -6,6 +6,7 @@ return {
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
 					"c",
+					"c_sharp",
 					"lua",
 					"vim",
 					"vimdoc",
@@ -17,11 +18,13 @@ return {
 					"javascript",
 					"typescript",
 					"tsx",
+					"json",
+					"xml",
 				},
 				auto_install = false,
 				ignore_install = {},
 				highlight = {
-					enable = false,
+					enable = true,
 
 					-- disable = { "c", "rust" },
 					disable = function(lang, buf)

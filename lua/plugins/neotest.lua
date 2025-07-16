@@ -6,7 +6,7 @@ return {
 			"nvim-lua/plenary.nvim",
 			"antoinemadec/FixCursorHold.nvim",
 			"nvim-treesitter/nvim-treesitter",
-
+			"Issafalcon/neotest-dotnet",
 			"nvim-neotest/neotest-python",
 			"mrcjkb/rustaceanvim",
 		},
@@ -16,6 +16,9 @@ return {
 
 			neotest.setup({
 				adapters = {
+					require("neotest-dotnet")({
+						dap = { justMyCode = false },
+					}),
 					require("neotest-python")({
 						dap = { justMyCode = false },
 					}),

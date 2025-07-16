@@ -25,6 +25,9 @@ return {
 			-- Javascript / Typescript
 			require("lspconfig").ts_ls.setup({})
 			require("lspconfig").tailwindcss.setup({})
+
+			-- C#
+			require("lspconfig").csharp_ls.setup({})
 		end,
 	},
 }
