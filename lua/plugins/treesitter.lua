@@ -4,6 +4,8 @@ return {
 		build = ":TSUpdate",
 		config = function()
 			require("nvim-treesitter.configs").setup({
+				modules = {},
+				sync_install = false,
 				ensure_installed = {
 					"c",
 					"c_sharp",
@@ -37,6 +39,10 @@ return {
 					additional_vim_regex_highlighting = false,
 				},
 			})
+			vim.opt.foldmethod = "expr"
+			vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+			vim.opt.foldenable = true
+			vim.opt.foldlevel = 10
 		end,
 	},
 }
