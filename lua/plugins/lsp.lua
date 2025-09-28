@@ -28,6 +28,9 @@ return {
 
 			-- C#
 			require("lspconfig").csharp_ls.setup({})
+
+			-- C++
+			require("lspconfig").clangd.setup({})
 		end,
 	},
 }

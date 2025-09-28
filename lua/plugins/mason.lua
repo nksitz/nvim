@@ -9,7 +9,7 @@ return {
 		config = function()
 			require("mason").setup()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "csharp_ls", "lua_ls", "pyright", "ruff", "ts_ls", "tailwindcss" },
+				ensure_installed = { "csharp_ls", "clangd", "lua_ls", "pyright", "ruff", "ts_ls", "tailwindcss" },
 			})
 			require("mason-tool-installer").setup({
 				ensure_installed = {

@@ -8,6 +8,8 @@ return {
 				sync_install = false,
 				ensure_installed = {
 					"c",
+					"cpp",
+					"cmake",
 					"c_sharp",
 					"lua",
 					"vim",
